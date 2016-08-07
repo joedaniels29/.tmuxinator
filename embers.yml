@@ -1,0 +1,61 @@
+# ~/.tmuxinator/Oct13.yml
+
+name: emberwrks
+root: ~/
+
+# Optional tmux socketD
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+#pre_window:
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t Oct13
+
+windows:
+  - Oasis:
+      root: ~/
+      panes:
+        - sOAS
+        - cd ~/Projects/Work/Oasis
+        - cd ~/Projects/Work/Oasis;  rails c
+        - cd ~/Projects/Work/Oasis;  RGTail beta
+  - ResWork:
+      root: ~/
+      panes:
+        - sRW
+        -
+        - cd /Users/Joe/Projects/Work/resident-worklist; rails c
+  - Reach:
+      root: ~/
+      panes:
+        - sRS
+        -
+        - cd  /Users/Joe/Projects/Work/REACH;
+        - cd  /Users/Joe/Projects/Work/ReachSearch; rails c
+        - cd  /Users/Joe/Projects/Work/ReachSearch; RGTail beta
+  - trelawneys:
+      root: ~/
+      panes:
+        - cd /Users/Joe/Projects/Work/ember-cli-trelawney;
+        - cd /Users/Joe/Projects/Work/trelawney
+  - PersonalWebsite:
+      root: /Users/Joe/Projects/Mine/PersonalSite
+      panes:
+        -  ember s
+        -

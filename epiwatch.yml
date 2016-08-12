@@ -29,10 +29,10 @@ pre: wait 3
 # post: tmux -CC attach -t Oct13
 
 windows:
-  - steroids:
-      root: /Users/Joe/Projects/Contract/readahead_tablet
+  - EpiWatch:
+      root: /Users/Joe/Projects/Work/epiwatch
       panes:
-        - steroids connect
+        -
   - PersonalWebsite:
      root: /Users/Joe/Projects/Mine/PersonalSite
      panes:

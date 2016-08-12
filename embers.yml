@@ -27,27 +27,27 @@ root: ~/
 # Runs after everything. Use it to attach to tmux with custom options etc.
 # post: tmux -CC attach -t Oct13
 
-windows:
+windows:;
   - Oasis:
       root: ~/
       panes:
-        - sOAS
+        - PRELOAD=yes sOAS
         - cd ~/Projects/Work/Oasis
-        - cd ~/Projects/Work/Oasis;  rails c
+        - PRELOAD=yes cd ~/Projects/Work/Oasis;  rails c
         - cd ~/Projects/Work/Oasis;  RGTail beta
   - ResWork:
       root: ~/
       panes:
-        - sRW
+        - PRELOAD=yes sRW
         -
-        - cd /Users/Joe/Projects/Work/resident-worklist; rails c
+        - PRELOAD=yes cd /Users/Joe/Projects/Work/resident-worklist; rails c
   - Reach:
       root: ~/
       panes:
-        - sRS
+        - PRELOAD=yes sRS
         -
         - cd  /Users/Joe/Projects/Work/REACH;
-        - cd  /Users/Joe/Projects/Work/ReachSearch; rails c
+        - PRELOAD=yes cd  /Users/Joe/Projects/Work/ReachSearch; rails c
         - cd  /Users/Joe/Projects/Work/ReachSearch; RGTail beta
   - trelawneys:
       root: ~/

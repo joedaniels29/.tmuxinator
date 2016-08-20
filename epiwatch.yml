@@ -37,7 +37,14 @@ windows:
      root: /Users/Joe/Projects/Mine/PersonalSite
      panes:
        -  ember s
-       -
+  - Reach:
+      root: ~/
+      panes:
+        - PRELOAD=yes sRS
+        -
+        - cd  /Users/Joe/Projects/Work/REACH;
+        - PRELOAD=yes cd  /Users/Joe/Projects/Work/ReachSearch; rails c
+        - cd  /Users/Joe/Projects/Work/ReachSearch; RGTail beta
         # - start that
   # - Oasis:
     #   root: ~/Projects/Work/findings-notification

@@ -39,7 +39,10 @@ windows:
        -  ember s
        -
         # - start that
-  # - Oasis:
-    #   root: ~/Projects/Work/findings-notification
-    #   panes:
-        # - ./launch_server
+  - cambridge:
+      root: /Users/Joe/Projects/Mine/cambridge
+      panes:
+        - ssh home
+        - mix phoenix.server
+        - ssh home
+        -
